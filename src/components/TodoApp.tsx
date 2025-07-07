@@ -1,5 +1,5 @@
 import React, { useState, useReducer, useMemo, useCallback } from 'react';
-import { Plus, Edit2, Trash2, Check, X, Search, Filter, Calendar, Star, AlertCircle } from 'lucide-react';
+import { Plus, Edit2, Trash2, Check, X, Search, AlertCircle } from 'lucide-react';
 
 // Types & Interfaces (Clean Code - Type Safety)
 interface Task {
@@ -258,8 +258,8 @@ const TaskItem: React.FC<{
                 <button
                     onClick={() => onToggle(task.id)}
                     className={`mt-1 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all duration-200 ${task.completed
-                            ? 'bg-green-500 border-green-500 text-white'
-                            : 'border-gray-300 hover:border-green-400'
+                        ? 'bg-green-500 border-green-500 text-white'
+                        : 'border-gray-300 hover:border-green-400'
                         }`}
                 >
                     {task.completed && <Check className="w-3 h-3" />}
@@ -441,8 +441,8 @@ const TaskFilters: React.FC<{
                             key={f}
                             onClick={() => onFilterChange(f)}
                             className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${filter === f
-                                    ? 'bg-blue-500 text-white'
-                                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                                ? 'bg-blue-500 text-white'
+                                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                                 }`}
                         >
                             {f.charAt(0).toUpperCase() + f.slice(1)}
